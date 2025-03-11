@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/historico.css')}}">
+    <title>Historico</title>
+</head>
+<body>
+    {% for dado in dados %}
+        <p><strong>CEP: </strong> {{dado.cep}}</p>
+        <p><strong>Logradouro: </strong> {{dado.logradouro}}</p>
+        <p><strong>Complemento: </strong> {{dado.complemento}}</p>
+        <p><strong>Unidade: </strong> {{dado.unidade}}</p>
+        <p><strong>Bairro: </strong> {{dado.bairro}}</p>
+        <p><strong>Localidade: </strong> {{dado.localidade}}</p>
+        <p><strong>UF: </strong> {{dado.uf}}</p>
+        <p><strong>Estado: </strong> {{dado.estado}}</p>
+        <p><strong>Regiao: </strong> {{dado.regiao}}</p>
+        <p><strong>IBGE: </strong> {{dado.ibge}}</p>
+        <p><strong>GIA: </strong> {{dado.gia}}</p>
+        <p><strong>DDD: </strong> {{dado.ddd}}</p>
+        <p><strong>SIAFI: </strong> {{dado.siafi}}</p>
+        <br>
+        <br>
+    {% endfor %}
+</body>
+</html>

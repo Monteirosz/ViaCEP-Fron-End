@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/index.css')}}">
+    <link rel="icon" href="{{ url_for ('static', filename='images/icone.png')}}">
+    <title>Via CEP (Atualizado!)</title>
+</head>
+<body>
+    <h1>Digite seu CEP:</h1>
+    <form action="/buscar_cep" method="POST">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" required maxlength="8" autocomplete="off">
+        <button type="submit">Buscar</button>
+    </form>
+    <form action="/historico" method="GET">
+        <button type="submit">Histórico</button>
+    </form>
+</body>
+</html>
